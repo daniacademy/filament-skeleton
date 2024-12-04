@@ -27,7 +27,7 @@ class AdminifyPanelProvider extends PanelProvider
             ->default()
             ->id('adminify')
             ->path('adminify')
-            ->login()
+            ->login(\App\Filament\Pages\Auth\CustomLogin::class)
             ->colors([
                 'primary' => Color::Amber,
             ])
