@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\AuthenticateHealthWithBasicAuth;
 use Illuminate\Support\Facades\Route;
 use Spatie\Health\Http\Controllers\HealthCheckJsonResultsController;
 
@@ -8,5 +9,5 @@ Route::get('/', function () {
 });
 
 // Healthcheck
-Route::get('health', HealthCheckJsonResultsController::class);
-    // ->middleware(AuthenticateHealthWithBasicAuth::class);
+Route::get('health', HealthCheckJsonResultsController::class)
+    ->middleware(AuthenticateHealthWithBasicAuth::class);

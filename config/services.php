@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'health' => [
+        'username' => env('HEALTH_BASIC_AUTH_USERNAME'),
+        'password' => env('HEALTH_BASIC_AUTH_PASSWORD'),
+    ],
+
 ];
