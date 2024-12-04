@@ -33,16 +33,24 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
     ```bash
     composer install
     ```
-4. Configure your database in the `.env` file.
-5. Run migrations:
+4. Copy the `.env.example` file and rename it to `.env`:
+    ```bash
+    cp .env.example .env
+    ```
+5. Configure your database and other environment variables in the `.env` file.
+6. Generate the application key:
+    ```bash
+    php artisan key:generate
+    ```
+7. Run migrations:
     ```bash
     php artisan migrate
     ```
-6. Seed the database:
+8. Seed the database:
     ```bash
     php artisan db:seed
     ```
-7. Create a super-admin user:
+9. Create a super-admin user:
     ```bash
     php artisan shield:super-admin
     ```
