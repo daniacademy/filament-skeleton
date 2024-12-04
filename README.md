@@ -54,6 +54,8 @@ The default credentials for accessing the application as a super-admin are:
 -   **Email**: `admin@example.com`
 -   **Password**: `123456`
 
+By default, you can access the admin panel at [http://localhost/admin](http://localhost/admin). Ensure your local server is running, and the necessary configurations in your `.env` file are correctly set up to avoid access issues.
+
 ## Notes
 
 This template is designed with love ❤️ to provide a robust starting point for Laravel applications built with Filament Admin. It includes pre-installed packages and essential configurations to reduce setup time and enhance productivity.
