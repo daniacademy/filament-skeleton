@@ -11,6 +11,7 @@
         "filament/filament": "^3.2",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
+        "spatie/laravel-backup": "^9.1",
         "spatie/laravel-health": "^1.30"
     },
     "require-dev": {

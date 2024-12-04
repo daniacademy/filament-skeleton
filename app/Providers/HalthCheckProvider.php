@@ -33,15 +33,15 @@ class HalthCheckProvider extends ServiceProvider
                 ->warnWhenUsedSpaceIsAbovePercentage(85)
                 ->failWhenUsedSpaceIsAbovePercentage(90),
             DatabaseCheck::new(),
-            // BackupsCheck::new()
-            //     ->locatedAt(
-            //         Storage::disk(
-            //             config('backup.backup.destination.disk')
-            //         )
-            //             ->path(config('backup.backup.name') . '/*.zip')
-            //     )
-            //     ->youngestBackShouldHaveBeenMadeBefore(now()->subHours(30))
-            //     ->atLeastSizeInMb(50),
+            BackupsCheck::new()
+                ->locatedAt(
+                    Storage::disk(
+                        config('backup.backup.destination.disk')
+                    )
+                        ->path(config('backup.backup.name') . '/*.zip')
+                )
+                ->youngestBackShouldHaveBeenMadeBefore(now()->subHours(30))
+                ->atLeastSizeInMb(50),
             OptimizedAppCheck::new(),
             DebugModeCheck::new(),
             EnvironmentCheck::new(),
