@@ -47,8 +47,15 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
     php artisan shield:super-admin
     ```
 
+## Default Super-Admin Credentials
+
+The default credentials for accessing the application as a super-admin are:
+
+-   **Email**: `admin@example.com`
+-   **Password**: `123456`
+
 ## Notes
 
-This template is designed to provide a robust starting point for Laravel applications built with Filament Admin. It includes pre-installed packages and essential configurations to reduce setup time and enhance productivity.
+This template is designed with love ❤️ to provide a robust starting point for Laravel applications built with Filament Admin. It includes pre-installed packages and essential configurations to reduce setup time and enhance productivity.
 
 Feel free to customize and extend it as needed for your projects.
