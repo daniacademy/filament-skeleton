@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/daniacademy/filament-skeleton/blob/7296a23ed3507c647b96fe4572cbd9a5da10073b/public/images/adminify.png" width="400" alt="Adminify Logo"></a></p>
+<p align="center"><img src="https://github.com/daniacademy/filament-skeleton/blob/c21d336b05e91e2ddc0914611d3fbe74555f9f88/public/images/adminify.png" width="400" alt="Adminify Logo"></a></p>
 
 # Filament Skeleton Template
 
