@@ -6,10 +6,10 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
 
 ## Features
 
--   [**Filament Shield**](https://github.com/bezhanSalleh/filament-shield){:target="\_blank"}: Role and permission management made simple.
--   **Spatie Health**: Monitor and ensure the health of your application.
--   **Laravel Audit**: Track model changes and activity.
--   **Task Scheduler Configuration**: Pre-configured tasks to handle essential maintenance:
+-   <a href="https://github.com/bezhanSalleh/filament-shield" target="_blank">**Filament Shield**</a>: Role and permission management made simple.
+-   <a href="https://github.com/spatie/laravel-health" target="_blank">**Spatie Health**</a>: Monitor and ensure the health of your application.
+-   <a href="https://laravel-auditing.com/" target="_blank">**Laravel Audit**: Track model changes and activity.
+-   <a href="https://laravel.com/docs/11.x/scheduling" target="_blank">**Task Scheduler Configuration**</a>: Pre-configured tasks to handle essential maintenance:
     ```php
     Schedule::command('queue:work --stop-when-empty')->everyMinute()
         ->withoutOverlapping();
@@ -20,12 +20,12 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
     Schedule::command('backup:run')->daily()->at('01:30');
     Schedule::command('db:optimize')->daily()->at('03:00');
     ```
--   **Security Headers and Content Security Policy (CSP)**: Middleware is included to enhance security using Spatie CSP.
--   **Customized Login Throttling**: Throttling behavior is adjusted to focus on individual users rather than their IP address, ensuring multiple users from the same IP are not blocked due to one user's failed attempts.
--   **Blade Font Awesome**: Easily integrate Font Awesome icons.
--   **Spatie Media Library Integration**: Seamless file and media management through Filament.
--   **Filament Notifications**: Customize elegant and dynamic notifications with icons, colors, and interactive actions.
--   **Edit Profile**: Allow users to easily update their profile information and securely change their password directly from the Filament panel.
+-   <a href="https://github.com/spatie/laravel-csp" target="_blank">**Security Headers and Content Security Policy (CSP)**</a>: Middleware is included to enhance security using Spatie CSP.
+-   <a href="https://laravel.com/docs/11.x/authentication" target="_blank">**Customized Login Throttling**</a>: Throttling behavior is adjusted to focus on individual users rather than their IP address, ensuring multiple users from the same IP are not blocked due to one user's failed attempts.
+-   <a href="https://github.com/owenvoke/blade-fontawesome" target="_blank">**Blade Font Awesome**</a>: Easily integrate Font Awesome icons.
+-   <a href="https://filamentphp.com/plugins/filament-spatie-media-library" target="_blank">**Spatie Media Library Integration**</a>: Seamless file and media management through Filament.
+-   <a href="https://filamentphp.com/docs/3.x/notifications/installation" target="_blank">**Filament Notifications**</a>: Customize elegant and dynamic notifications with icons, colors, and interactive actions.
+-   <a href="https://filamentphp.com/plugins/joaopaulolndev-edit-profile" target="_blank">**Edit Profile**</a>: Allow users to easily update their profile information and securely change their password directly from the Filament panel.
 
 ## Deployment Instructions
 
