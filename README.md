@@ -6,7 +6,7 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
 
 ## Features
 
--   **Filament Shield**: Role and permission management made simple.
+-   [**Filament Shield**](https://github.com/bezhanSalleh/filament-shield){:target="\_blank"}: Role and permission management made simple.
 -   **Spatie Health**: Monitor and ensure the health of your application.
 -   **Laravel Audit**: Track model changes and activity.
 -   **Task Scheduler Configuration**: Pre-configured tasks to handle essential maintenance:
@@ -25,6 +25,7 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
 -   **Blade Font Awesome**: Easily integrate Font Awesome icons.
 -   **Spatie Media Library Integration**: Seamless file and media management through Filament.
 -   **Filament Notifications**: Customize elegant and dynamic notifications with icons, colors, and interactive actions.
+-   **Edit Profile**: Allow users to easily update their profile information and securely change their password directly from the Filament panel.
 
 ## Deployment Instructions
 
