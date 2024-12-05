@@ -24,6 +24,7 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
 -   **Customized Login Throttling**: Throttling behavior is adjusted to focus on individual users rather than their IP address, ensuring multiple users from the same IP are not blocked due to one user's failed attempts.
 -   **Blade Font Awesome**: Easily integrate Font Awesome icons.
 -   **Spatie Media Library Integration**: Seamless file and media management through Filament.
+-   **Filament Notifications**: Customize elegant and dynamic notifications with icons, colors, and interactive actions.
 
 ## Deployment Instructions
 
