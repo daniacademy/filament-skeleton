@@ -33,6 +33,7 @@ class AdminifyPanelProvider extends PanelProvider
             ])
             ->topNavigation()
             ->maxContentWidth(MaxWidth::Full)
+            ->databaseNotifications()
             ->brandLogo(asset('/images/logo.svg'))
             ->darkModeBrandLogo(asset('/images/logo-dark.svg'))
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
