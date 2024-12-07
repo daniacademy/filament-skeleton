@@ -87,3 +87,11 @@ By default, you can access the admin panel at [http://localhost/admin](http://lo
 This template is designed with love ❤️ to provide a robust starting point for Laravel applications built with Filament Admin. It includes pre-installed packages and essential configurations to reduce setup time and enhance productivity.
 
 Feel free to customize and extend it as needed for your projects.
+
+## Acknowledgments
+
+I would like to express my gratitude to [**Laravel**](https://laravel.com) and [**Filament**](https://filamentphp.com) for their invaluable contributions to the community and their continuous effort in advancing the ecosystem. Their work has made web development more efficient and enjoyable.
+
+I would also like to thank my family for their patience and understanding during the many hours I spend working on development. Their support means the world to me.
+
+Thank you all!
