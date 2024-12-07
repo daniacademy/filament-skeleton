@@ -1,9 +1,15 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
+    "name": "daniacademy/filament-skeleton",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "A starter template for Filament V3 and Laravel with preconfigured authentication, roles, and permissions.",
+    "keywords": [
+        "filament",
+        "laravel",
+        "framework",
+        "skeleton",
+        "template"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -78,5 +84,17 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Daniel A. Fernandez",
+            "email": "dafernandez@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/daniacademy/filament-skeleton"
+        }
+    ]
 }
