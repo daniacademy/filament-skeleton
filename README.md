@@ -27,7 +27,19 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
 -   <a href="https://filamentphp.com/docs/3.x/notifications/installation" target="_blank">**Filament Notifications**</a>: Customize elegant and dynamic notifications with icons, colors, and interactive actions.
 -   <a href="https://filamentphp.com/plugins/joaopaulolndev-edit-profile" target="_blank">**Edit Profile**</a>: Allow users to easily update their profile information and securely change their password directly from the Filament panel.
 
-## Deployment Instructions
+## How to Use
+
+This project can be deployed in two ways: as a **Composer project** or as a **GitHub template**. Regardless of the chosen method, make sure to continue with the **"How to deploy"** section to complete the installation and configuration.
+
+### Option 1: Using Composer
+
+1. Create your project with Composer:
+    ```bash
+    composer create-project daniacademy/filament-skeleton projectName
+    ```
+2. Then, proceed to the steps in the **"How to deploy"** section.
+
+### Option 2: Using GitHub Template
 
 1. Create a new repository using this skeleton as a template.
 2. Clone your new repository locally.
@@ -35,24 +47,28 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
     ```bash
     composer install
     ```
-4. Copy the `.env.example` file and rename it to `.env`:
+4. Finally, continue with the steps in the **"How to deploy"** section.
+
+## How to deploy
+
+1. Copy the `.env.example` file and rename it to `.env`:
     ```bash
     cp .env.example .env
     ```
-5. Configure your database and other environment variables in the `.env` file.
-6. Generate the application key:
+2. Configure your database and other environment variables in the `.env` file.
+3. Generate the application key:
     ```bash
     php artisan key:generate
     ```
-7. Run migrations:
+4. Run migrations:
     ```bash
     php artisan migrate
     ```
-8. Seed the database:
+5. Seed the database:
     ```bash
     php artisan db:seed
     ```
-9. Create a super-admin user:
+6. Create a super-admin user:
     ```bash
     php artisan shield:super-admin
     ```
