@@ -2,7 +2,7 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "daniacademy/filament-skeleton",
     "type": "project",
-    "description": "A starter template for Filament V3 and Laravel with preconfigured authentication, roles, and permissions.",
+    "description": "A starter template for Filament V3 and Laravel, preconfigured with authentication, roles, permissions, and much more.",
     "keywords": [
         "filament",
         "laravel",
