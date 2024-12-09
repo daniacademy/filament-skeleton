@@ -72,6 +72,19 @@ This project can be deployed in two ways: as a **Composer project** or as a **Gi
     ```bash
     php artisan shield:super-admin
     ```
+7. **Review `canAccessPanel()` Method for Production**
+   For enhanced security in a production environment, it's recommended to review and customize the `canAccessPanel()` method within the `User` model. This method controls access to the admin panel and can be tailored to enforce specific conditions, such as restricting access based on user roles, permissions, or other business logic.
+
+    **Example: Customizing `canAccessPanel()`**
+
+    ```php
+    public function canAccessPanel(): bool
+    {
+        return $this->hasRole('Admin') || $this->is_super_admin;
+    }
+    ```
+
+    Taking this step ensures that only authorized users can access the admin panel, reducing potential vulnerabilities in your application.
 
 ## Default Super-Admin Credentials
 
