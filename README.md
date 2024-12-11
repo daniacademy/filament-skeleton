@@ -27,6 +27,7 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
 -   <a href="https://filamentphp.com/docs/3.x/notifications/installation" target="_blank">**Filament Notifications**</a>: Customize elegant and dynamic notifications with icons, colors, and interactive actions.
 -   <a href="https://filamentphp.com/plugins/joaopaulolndev-edit-profile" target="_blank">**Edit Profile**</a>: Allow users to easily update their profile information and securely change their password directly from the Filament panel.
 -   <a href="https://laravel.com/docs/11.x/eloquent-relationships#preventing-lazy-loading" target="_blank">**Disable lazy loading in Laravel with `preventLazyLoading()` method**</a>: Taylor Otwell tweeted about this new feature available in Laravel 8.43.0 that disables lazy loading your Eloquent models, avoiding the N+1 problem. This way every time you use lazy loading, an exception will be thrown, but only on non-production environment, so no need to worry about crashing your production if you miss something.
+-   **Production Script in Composer**: This script optimizes a Laravel and Filament application for a production environment. It performs the following actions: runs composer dump-autoload -o, caches configuration, routes, and views, caches Filament components, and executes Laravel's optimization commands.
 
 ## How to Use
 
@@ -73,7 +74,16 @@ This project can be deployed in two ways: as a **Composer project** or as a **Gi
     ```bash
     php artisan shield:super-admin
     ```
-7. **Review `canAccessPanel()` Method for Production**
+
+## Running on production environment
+
+1. **Optimize the Laravel and Filament Application**
+   It is highly recommended to optimize Laravel and Filament to enhance the application's performance. To do so, run the following command:
+    ```bash
+    composer production
+    ```
+    Remember to execute this command after making any changes or deploying a new release to production.
+2. **Review `canAccessPanel()` Method for Production**
 
     For enhanced security in a production environment, it's recommended to review and customize the `canAccessPanel()` method within the `User` model. This method controls access to the admin panel and can be tailored to enforce specific conditions, such as restricting access based on user roles, permissions, or other business logic.
 
