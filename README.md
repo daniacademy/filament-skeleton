@@ -26,6 +26,7 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
 -   <a href="https://filamentphp.com/plugins/filament-spatie-media-library" target="_blank">**Spatie Media Library Integration**</a>: Seamless file and media management through Filament.
 -   <a href="https://filamentphp.com/docs/3.x/notifications/installation" target="_blank">**Filament Notifications**</a>: Customize elegant and dynamic notifications with icons, colors, and interactive actions.
 -   <a href="https://filamentphp.com/plugins/joaopaulolndev-edit-profile" target="_blank">**Edit Profile**</a>: Allow users to easily update their profile information and securely change their password directly from the Filament panel.
+-   <a href="https://laravel.com/docs/11.x/eloquent-relationships#preventing-lazy-loading" target="_blank">**Disable lazy loading in Laravel with `preventLazyLoading()` method**</a>: Taylor Otwell tweeted about this new feature available in Laravel 8.43.0 that disables lazy loading your Eloquent models, avoiding the N+1 problem. This way every time you use lazy loading, an exception will be thrown, but only on non-production environment, so no need to worry about crashing your production if you miss something.
 
 ## How to Use
 
