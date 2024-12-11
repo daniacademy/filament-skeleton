@@ -57,20 +57,21 @@ This project can be deployed in two ways: as a **Composer project** or as a **Gi
 
 ## How to deploy
 
-1. Configure your database and other environment variables in the `.env` file.
-2. Generate the application key:
+1. Ensure that you are located in the root directory of the application before proceeding with the deployment steps.
+2. Configure your database and other environment variables in the `.env` file.
+3. Generate the application key:
     ```bash
     php artisan key:generate
     ```
-3. Run migrations:
+4. Run migrations:
     ```bash
     php artisan migrate
     ```
-4. Seed the database:
+5. Seed the database:
     ```bash
     php artisan db:seed
     ```
-5. Create a super-admin user:
+6. Create a super-admin user:
     ```bash
     php artisan shield:super-admin
     ```
