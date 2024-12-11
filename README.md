@@ -49,28 +49,28 @@ This project can be deployed in two ways: as a **Composer project** or as a **Gi
     ```bash
     composer install
     ```
-4. Finally, continue with the steps in the **"How to deploy"** section.
-
-## How to deploy
-
-1. Copy the `.env.example` file and rename it to `.env`:
+4. Copy the `.env.example` file and rename it to `.env`:
     ```bash
     cp .env.example .env
     ```
-2. Configure your database and other environment variables in the `.env` file.
-3. Generate the application key:
+5. Finally, continue with the steps in the **"How to deploy"** section.
+
+## How to deploy
+
+1. Configure your database and other environment variables in the `.env` file.
+2. Generate the application key:
     ```bash
     php artisan key:generate
     ```
-4. Run migrations:
+3. Run migrations:
     ```bash
     php artisan migrate
     ```
-5. Seed the database:
+4. Seed the database:
     ```bash
     php artisan db:seed
     ```
-6. Create a super-admin user:
+5. Create a super-admin user:
     ```bash
     php artisan shield:super-admin
     ```
