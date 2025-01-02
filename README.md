@@ -28,6 +28,7 @@ This repository is a ready-to-use skeleton for building Laravel applications wit
 -   <a href="https://filamentphp.com/plugins/joaopaulolndev-edit-profile" target="_blank">**Edit Profile**</a>: Allow users to easily update their profile information and securely change their password directly from the Filament panel.
 -   <a href="https://laravel.com/docs/11.x/eloquent-relationships#preventing-lazy-loading" target="_blank">**Disable lazy loading in Laravel with `preventLazyLoading()` method**</a>: Taylor Otwell tweeted about this new feature available in Laravel 8.43.0 that disables lazy loading your Eloquent models, avoiding the N+1 problem. This way every time you use lazy loading, an exception will be thrown, but only on non-production environment, so no need to worry about crashing your production if you miss something.
 -   **Production Script in Composer**: This script optimizes a Laravel and Filament application for a production environment. It performs the following actions: runs composer dump-autoload -o, caches configuration, routes, and views, caches Filament components, and executes Laravel's optimization commands.
+-   <a href="https://github.com/nunomaduro/phpinsights" target="_blank">**PHP Insights**</a>: This project comes with PHP Insights pre-configured and ready to use, providing real-time code quality analysis, including maintainability, complexity, and security insights. Easily ensure your codebase adheres to modern best practices without additional setup.
 
 ## How to Use
 
