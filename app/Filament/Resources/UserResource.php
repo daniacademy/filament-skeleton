@@ -69,9 +69,7 @@ class UserResource extends Resource
                 TextColumn::make('created_at'),
                 TextColumn::make('updated_at'),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -91,9 +89,7 @@ class UserResource extends Resource
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array
