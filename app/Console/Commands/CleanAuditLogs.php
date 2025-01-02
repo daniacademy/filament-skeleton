@@ -30,6 +30,6 @@ class CleanAuditLogs extends Command
         $date = now()->subDays($days); // Calcula la fecha para eliminar registros
         $deleted = Audit::where('created_at', '<', $date)->delete(); // Elimina los registros
 
-        $this->info("Deleted $deleted audit logs older than $days days."); // Mensaje de salida
+        $this->info("Deleted {$deleted} audit logs older than {$days} days."); // Mensaje de salida
     }
 }
