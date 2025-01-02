@@ -2,9 +2,9 @@
 
 namespace App\Services\Csp\Policies;
 
-use Spatie\Csp\Policies\Policy;
 use Spatie\Csp\Directive;
 use Spatie\Csp\Keyword;
+use Spatie\Csp\Policies\Policy;
 
 class CspCustomPolicies extends Policy
 {
