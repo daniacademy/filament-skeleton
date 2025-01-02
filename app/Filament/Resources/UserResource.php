@@ -21,7 +21,7 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
-    protected static ?string $navigationGroup = "Seguridad";
+    protected static ?string $navigationGroup = 'Seguridad';
 
     public static function shouldRegisterNavigation(): bool
     {
