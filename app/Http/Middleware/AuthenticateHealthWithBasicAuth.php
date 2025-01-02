@@ -8,18 +8,20 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AuthenticateHealthWithBasicAuth
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
     public function handle(Request $request, Closure $next): Response
     {
         $username = config('services.health.username');
         $password = config('services.health.password');
 
-        if ($request->headers->get('PHP_AUTH_USER') !== $username || $request->headers->get('PHP_AUTH_PW') !== $password) {
-            return response('Invalid credentials.', 401, ['WWW-Authenticate' => 'Basic']);
+        if (
+            $request->headers->get('PHP_AUTH_USER') !== $username
+            || $request->headers->get('PHP_AUTH_PW') !== $password
+        ) {
+            return response(
+                'Invalid credentials.',
+                401,
+                ['WWW-Authenticate' => 'Basic']
+            );
         }
 
         return $next($request);

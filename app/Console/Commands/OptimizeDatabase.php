@@ -32,8 +32,8 @@ class OptimizeDatabase extends Command
 
         foreach ($tables as $table) {
             $tableName = $table->{'Tables_in_' . env('DB_DATABASE')};
-            DB::statement("OPTIMIZE TABLE $tableName");
-            $this->info("Optimized table: $tableName");
+            DB::statement("OPTIMIZE TABLE {$tableName}");
+            $this->info("Optimized table: {$tableName}");
         }
 
         $this->info('Database optimization completed.');

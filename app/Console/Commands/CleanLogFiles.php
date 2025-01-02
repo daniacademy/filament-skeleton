@@ -37,7 +37,10 @@ class CleanLogFiles extends Command
 
         foreach ($logFiles as $file) {
             // Verificar si el archivo es un archivo diario
-            if ($file->getExtension() === 'log' && $file->getMTime() < $thresholdDate->getTimestamp()) {
+            if (
+                $file->getExtension() === 'log'
+                && $file->getMTime() < $thresholdDate->getTimestamp()
+            ) {
                 // Eliminar el archivo
                 File::delete($file);
                 $this->info("Deleted log file: {$file->getFilename()}");

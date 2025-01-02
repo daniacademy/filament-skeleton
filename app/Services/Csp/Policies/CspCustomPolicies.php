@@ -2,9 +2,9 @@
 
 namespace App\Services\Csp\Policies;
 
-use Spatie\Csp\Policies\Policy;
 use Spatie\Csp\Directive;
 use Spatie\Csp\Keyword;
+use Spatie\Csp\Policies\Policy;
 
 class CspCustomPolicies extends Policy
 {
@@ -21,7 +21,7 @@ class CspCustomPolicies extends Policy
             ->addDirective(Directive::IMG, [
                 Keyword::SELF,
                 'data:',
-                'blob:'
+                'blob:',
             ])
             ->addDirective(Directive::MEDIA, Keyword::SELF)
             ->addDirective(Directive::SCRIPT, [

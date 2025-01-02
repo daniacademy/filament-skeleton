@@ -21,7 +21,7 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
-    protected static ?string $navigationGroup = "Seguridad";
+    protected static ?string $navigationGroup = 'Seguridad';
 
     public static function shouldRegisterNavigation(): bool
     {
@@ -43,7 +43,9 @@ class UserResource extends Resource
                     ->password()
                     ->rule(Password::default())
                     ->required(fn($context) => $context === 'create')
-                    ->dehydrateStateUsing(fn($state) => $state === '' ? null : $state),
+                    ->dehydrateStateUsing(
+                        fn($state) => $state === '' ? null : $state
+                    ),
                 Select::make('roles')
                     ->relationship('roles', 'name')
                     ->multiple()
@@ -54,7 +56,8 @@ class UserResource extends Resource
                         if ($user && $user->isSuperAdmin()) {
                             return Role::pluck('name', 'id');
                         }
-                        return Role::getAdministrativeRole()->pluck('name', 'id');
+                        return Role::getAdministrativeRole()
+                            ->pluck('name', 'id');
                     }),
             ]);
     }
@@ -69,9 +72,7 @@ class UserResource extends Resource
                 TextColumn::make('created_at'),
                 TextColumn::make('updated_at'),
             ])
-            ->filters([
-                //
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
@@ -85,15 +86,16 @@ class UserResource extends Resource
                 if ($user && $user->isSuperAdmin()) {
                     return $query;
                 }
-                $query->whereIn('name', Role::getAdministrativeRole()->pluck('name'));
+                $query->whereIn(
+                    'name',
+                    Role::getAdministrativeRole()->pluck('name')
+                );
             }));
     }
 
     public static function getRelations(): array
     {
-        return [
-            //
-        ];
+        return [];
     }
 
     public static function getPages(): array
