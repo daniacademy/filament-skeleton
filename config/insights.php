@@ -8,6 +8,15 @@ use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses;
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenPrivateMethods;
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenTraits;
 use NunoMaduro\PhpInsights\Domain\Metrics\Architecture\Classes;
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterNotSniff;
+use PHP_CodeSniffer\Standards\PEAR\Sniffs\WhiteSpace\ScopeClosingBraceSniff;
+use PhpCsFixer\Fixer\Basic\BracesFixer;
+use PhpCsFixer\Fixer\Basic\BracesPositionFixer;
+use PhpCsFixer\Fixer\ClassNotation\ClassDefinitionFixer;
+use PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer;
+use PhpCsFixer\Fixer\FunctionNotation\FunctionDeclarationFixer;
+use PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer;
+use PhpCsFixer\Tokenizer\Transformer\BraceClassInstantiationTransformer;
 use SlevomatCodingStandard\Sniffs\Commenting\UselessFunctionDocCommentSniff;
 use SlevomatCodingStandard\Sniffs\Namespaces\AlphabeticallySortedUsesSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\DeclareStrictTypesSniff;
@@ -51,7 +60,7 @@ return [
     |
     */
 
-    'ide' => null,
+    'ide' => 'vscode',
 
     /*
     |--------------------------------------------------------------------------
@@ -66,6 +75,7 @@ return [
 
     'exclude' => [
         //  'path/to/directory-or-file'
+        'lang',
     ],
 
     'add' => [
@@ -85,6 +95,15 @@ return [
         PropertyTypeHintSniff::class,
         ReturnTypeHintSniff::class,
         UselessFunctionDocCommentSniff::class,
+        BinaryOperatorSpacesFixer::class,
+        BracesPositionFixer::class,
+        BraceClassInstantiationTransformer::class,
+        ClassDefinitionFixer::class,
+        ScopeClosingBraceSniff::class,
+        SpaceAfterNotSniff::class,
+        OrderedClassElementsFixer::class,
+        BracesFixer::class,
+        FunctionDeclarationFixer::class,
     ],
 
     'config' => [
@@ -105,11 +124,11 @@ return [
     */
 
     'requirements' => [
-//        'min-quality' => 0,
-//        'min-complexity' => 0,
-//        'min-architecture' => 0,
-//        'min-style' => 0,
-//        'disable-security-check' => false,
+        //        'min-quality' => 0,
+        //        'min-complexity' => 0,
+        //        'min-architecture' => 0,
+        //        'min-style' => 0,
+        //        'disable-security-check' => false,
     ],
 
     /*
