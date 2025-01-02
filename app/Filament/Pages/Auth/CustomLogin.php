@@ -60,7 +60,7 @@ class CustomLogin extends Login
             ->extraInputAttributes([
                 'tabindex' => 1,
                 'name' => 'email',
-                'id' => 'email'
+                'id' => 'email',
             ]);
     }
 }
