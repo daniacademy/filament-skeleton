@@ -12,8 +12,8 @@ class Role extends ModelsRole implements Auditable
 {
     use HasFactory, SoftDeletes, \OwenIt\Auditing\Auditable;
 
-    const SUPER_ADMIN = 'super_admin';
-    const ADMINISTRADOR = 'Administrador';
+    public const SUPER_ADMIN = 'super_admin';
+    public const ADMINISTRADOR = 'Administrador';
 
     public static function getSuperAdminRole(): self
     {
