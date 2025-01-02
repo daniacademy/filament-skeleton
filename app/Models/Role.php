@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use OwenIt\Auditing\Contracts\Auditable;
@@ -19,7 +20,7 @@ class Role extends ModelsRole implements Auditable
         return self::where('name', self::SUPER_ADMIN)->first();
     }
 
-    public static function getAdministrativeRole(): \Illuminate\Database\Eloquent\Collection
+    public static function getAdministrativeRole(): Collection
     {
         return self::whereIn('name', [self::ADMINISTRADOR])->get();
     }

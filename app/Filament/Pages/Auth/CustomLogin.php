@@ -26,7 +26,10 @@ class CustomLogin extends Login
 
         $data = $this->form->getState();
 
-        if (! Filament::auth()->attempt($this->getCredentialsFromFormData($data), $data['remember'] ?? false)) {
+        if (! Filament::auth()->attempt(
+            $this->getCredentialsFromFormData($data),
+            $data['remember'] ?? false
+        )) {
             $this->throwFailureValidationException();
         }
 
@@ -54,6 +57,10 @@ class CustomLogin extends Login
             ->required()
             ->autocomplete()
             ->autofocus()
-            ->extraInputAttributes(['tabindex' => 1, 'name' => 'email', 'id' => 'email']);
+            ->extraInputAttributes([
+                'tabindex' => 1,
+                'name' => 'email',
+                'id' => 'email'
+            ]);
     }
 }

@@ -43,7 +43,9 @@ class UserResource extends Resource
                     ->password()
                     ->rule(Password::default())
                     ->required(fn($context) => $context === 'create')
-                    ->dehydrateStateUsing(fn($state) => $state === '' ? null : $state),
+                    ->dehydrateStateUsing(
+                        fn($state) => $state === '' ? null : $state
+                    ),
                 Select::make('roles')
                     ->relationship('roles', 'name')
                     ->multiple()
@@ -54,7 +56,8 @@ class UserResource extends Resource
                         if ($user && $user->isSuperAdmin()) {
                             return Role::pluck('name', 'id');
                         }
-                        return Role::getAdministrativeRole()->pluck('name', 'id');
+                        return Role::getAdministrativeRole()
+                            ->pluck('name', 'id');
                     }),
             ]);
     }
@@ -83,7 +86,10 @@ class UserResource extends Resource
                 if ($user && $user->isSuperAdmin()) {
                     return $query;
                 }
-                $query->whereIn('name', Role::getAdministrativeRole()->pluck('name'));
+                $query->whereIn(
+                    'name',
+                    Role::getAdministrativeRole()->pluck('name')
+                );
             }));
     }
 

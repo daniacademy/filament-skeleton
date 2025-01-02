@@ -19,17 +19,24 @@ class CleanAuditLogs extends Command
      *
      * @var string
      */
-    protected $description = 'Clean audit logs older than a specified number of days';
+    protected $description =
+    'Clean audit logs older than a specified number of days';
 
     /**
      * Execute the console command.
      */
     public function handle()
     {
-        $days = $this->argument('days'); // Por defecto, 365 días
-        $date = now()->subDays($days); // Calcula la fecha para eliminar registros
-        $deleted = Audit::where('created_at', '<', $date)->delete(); // Elimina los registros
+        $days = $this->argument('days');
+        $date = now()->subDays($days);
+        $deleted = Audit::where(
+            'created_at',
+            '<',
+            $date
+        )->delete();
 
-        $this->info("Deleted {$deleted} audit logs older than {$days} days."); // Mensaje de salida
+        $this->info(
+            "Deleted {$deleted} audit logs older than {$days} days."
+        );
     }
 }
