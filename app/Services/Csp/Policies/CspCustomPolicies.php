@@ -21,7 +21,7 @@ class CspCustomPolicies extends Policy
             ->addDirective(Directive::IMG, [
                 Keyword::SELF,
                 'data:',
-                'blob:'
+                'blob:',
             ])
             ->addDirective(Directive::MEDIA, Keyword::SELF)
             ->addDirective(Directive::SCRIPT, [
