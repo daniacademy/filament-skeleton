@@ -29,7 +29,9 @@ class OptimizeDatabase extends Command
         $this->info('Starting database optimization...');
 
         $defaultConnection = config('database.default');
-        $databaseName = config("database.connections.{$defaultConnection}.database");
+        $databaseName = config(
+            "database.connections.{$defaultConnection}.database"
+        );
 
         $tables = DB::select('SHOW TABLES');
 
