@@ -10,8 +10,8 @@ class CustomPathGenerator implements PathGenerator
     public function getPath(Media $media): string
     {
         $modelName = class_basename($media->model_type);
-        $year = now()->format('Y');
-        $month = now()->format('m');
+        $year = $media->created_at->format('Y');
+        $month = $media->created_at->format('m');
 
         return "{$modelName}/{$year}{$month}/";
     }
