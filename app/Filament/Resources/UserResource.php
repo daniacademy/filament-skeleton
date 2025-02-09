@@ -48,6 +48,7 @@ class UserResource extends Resource
                     ),
                 Select::make('roles')
                     ->relationship('roles', 'name')
+                    ->required()
                     ->multiple()
                     ->preload()
                     ->searchable()
@@ -87,8 +88,8 @@ class UserResource extends Resource
                     return $query;
                 }
                 $query->whereIn(
-                    'name',
-                    Role::getAdministrativeRole()->pluck('name')
+                    'id',
+                    Role::getAdministrativeRole()->pluck('id')
                 );
             }));
     }

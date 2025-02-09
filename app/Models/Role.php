@@ -22,6 +22,6 @@ class Role extends ModelsRole implements Auditable
 
     public static function getAdministrativeRole(): Collection
     {
-        return self::whereIn('name', [self::ADMINISTRADOR])->get();
+        return self::whereNot('id', self::getSuperAdminRole()->id)->get();
     }
 }
